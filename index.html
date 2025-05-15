@@ -3,133 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hans Tirta</title>
+  <title>Simple Blog</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-    }
-    header {
-      background: #333;
-      color: white;
-      padding: 1em;
-      text-align: center;
-    }
-    .container {
-      max-width: 1000px;
-      margin: 20px auto;
-      padding: 0 20px;
-    }
-    .search-box {
-      margin-bottom: 20px;
-    }
-    .search-box input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    .posts {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-    .post {
-      background: white;
-      padding: 15px;
-      border-radius: 5px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    }
-    .post a {
-      text-decoration: none;
-      color: black;
-      display: block;
-    }
-    .post-category {
-      background: #666;
-      color: white;
-      display: inline-block;
-      padding: 3px 8px;
-      border-radius: 3px;
-      font-size: 0.9em;
-      margin-top: 5px;
-    }
-    .pagination {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .pagination button {
-      background: #333;
-      color: white;
-      border: none;
-      padding: 10px 15px;
-      margin: 0 5px;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-    .categories {
-      margin-top: 30px;
-    }
-    .categories h3 {
-      margin-bottom: 10px;
-    }
-    .categories ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .categories li {
-      background: #333;
-      color: white;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    footer {
-      background: #333;
-      color: #fff;
-      text-align: center;
-      padding: 1em;
-      margin-top: 40px;
-    }
-    @media screen and (max-width: 600px) {
-      .posts {
-        flex-direction: column;
-      }
-    }
+    * { box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; }
+    header, footer { background: #333; color: white; text-align: center; padding: 1em; }
+    .container { max-width: 1000px; margin: 20px auto; padding: 0 20px; }
+    .search-box { margin-bottom: 20px; }
+    .search-box input { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px; }
+    .posts { display: flex; flex-direction: column; gap: 20px; }
+    .post { background: white; padding: 15px; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    .post a { text-decoration: none; color: black; display: block; }
+    .post-category { background: #666; color: white; display: inline-block; padding: 3px 8px; border-radius: 3px; font-size: 0.9em; margin-top: 5px; }
+    .pagination { display: flex; justify-content: center; margin-top: 20px; }
+    .pagination button { background: #333; color: white; border: none; padding: 10px 15px; margin: 0 5px; cursor: pointer; border-radius: 5px; }
+    .categories { margin-top: 30px; }
+    .categories h3 { margin-bottom: 10px; }
+    .categories ul { list-style: none; padding: 0; display: flex; gap: 10px; flex-wrap: wrap; }
+    .categories li { background: #333; color: white; padding: 5px 10px; border-radius: 5px; cursor: pointer; }
+    @media screen and (max-width: 600px) { .posts { flex-direction: column; } }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Hans Tirta Project</h1>
-  </header>
+  <header><h1>My Simple Blog</h1></header>
   <div class="container">
     <div class="search-box">
       <input type="text" placeholder="Search..." id="searchInput" />
     </div>
 
-    <div class="posts">
-      <!-- 10 Posts Total -->
-      <!-- Posts 1-5 -->
-      <div class="post"><a href="post1.html"><h2>Post 1 Title</h2><p>This is a summary of post 1...</p><span class="post-category">Technology</span></a></div>
-      <div class="post"><a href="post2.html"><h2>Post 2 Title</h2><p>This is a summary of post 2...</p><span class="post-category">Lifestyle</span></a></div>
-      <div class="post"><a href="post3.html"><h2>Post 3 Title</h2><p>This is a summary of post 3...</p><span class="post-category">Travel</span></a></div>
-      <div class="post"><a href="post4.html"><h2>Post 4 Title</h2><p>This is a summary of post 4...</p><span class="post-category">Education</span></a></div>
-      <div class="post"><a href="post5.html"><h2>Post 5 Title</h2><p>This is a summary of post 5...</p><span class="post-category">Food</span></a></div>
-      <!-- Posts 6-10 -->
-      <div class="post"><a href="post6.html"><h2>Post 6 Title</h2><p>This is a summary of post 6...</p><span class="post-category">Business</span></a></div>
-      <div class="post"><a href="post7.html"><h2>Post 7 Title</h2><p>This is a summary of post 7...</p><span class="post-category">Science</span></a></div>
-      <div class="post"><a href="post8.html"><h2>Post 8 Title</h2><p>This is a summary of post 8...</p><span class="post-category">Sports</span></a></div>
-      <div class="post"><a href="post9.html"><h2>Post 9 Title</h2><p>This is a summary of post 9...</p><span class="post-category">Art</span></a></div>
-      <div class="post"><a href="post10.html"><h2>Post 10 Title</h2><p>This is a summary of post 10...</p><span class="post-category">News</span></a></div>
+    <div class="posts" id="postList">
+      <div class="post" data-category="Technology"><a href="#post1"><h2>Post 1 Title</h2><p>This is a summary of post 1...</p><span class="post-category">Technology</span></a></div>
+      <div class="post" data-category="Lifestyle"><a href="#"><h2>Post 2 Title</h2><p>This is a summary of post 2...</p><span class="post-category">Lifestyle</span></a></div>
+      <div class="post" data-category="Travel"><a href="#"><h2>Post 3 Title</h2><p>This is a summary of post 3...</p><span class="post-category">Travel</span></a></div>
+      <div class="post" data-category="Education"><a href="#"><h2>Post 4 Title</h2><p>This is a summary of post 4...</p><span class="post-category">Education</span></a></div>
+      <div class="post" data-category="Food"><a href="#"><h2>Post 5 Title</h2><p>This is a summary of post 5...</p><span class="post-category">Food</span></a></div>
+      <div class="post" data-category="Business"><a href="#"><h2>Post 6 Title</h2><p>This is a summary of post 6...</p><span class="post-category">Business</span></a></div>
+      <div class="post" data-category="Science"><a href="#"><h2>Post 7 Title</h2><p>This is a summary of post 7...</p><span class="post-category">Science</span></a></div>
+      <div class="post" data-category="Sports"><a href="#"><h2>Post 8 Title</h2><p>This is a summary of post 8...</p><span class="post-category">Sports</span></a></div>
+      <div class="post" data-category="Art"><a href="#"><h2>Post 9 Title</h2><p>This is a summary of post 9...</p><span class="post-category">Art</span></a></div>
+      <div class="post" data-category="News"><a href="#"><h2>Post 10 Title</h2><p>This is a summary of post 10...</p><span class="post-category">News</span></a></div>
     </div>
 
     <div class="pagination">
@@ -139,36 +51,47 @@
 
     <div class="categories">
       <h3>Categories</h3>
-      <ul>
-        <li>Technology</li>
-        <li>Lifestyle</li>
-        <li>Travel</li>
-        <li>Education</li>
-        <li>Food</li>
-        <li>Business</li>
-        <li>Science</li>
-        <li>Sports</li>
-        <li>Art</li>
-        <li>News</li>
+      <ul id="categoryList">
+        <li data-filter="All">All</li>
+        <li data-filter="Technology">Technology</li>
+        <li data-filter="Lifestyle">Lifestyle</li>
+        <li data-filter="Travel">Travel</li>
+        <li data-filter="Education">Education</li>
+        <li data-filter="Food">Food</li>
+        <li data-filter="Business">Business</li>
+        <li data-filter="Science">Science</li>
+        <li data-filter="Sports">Sports</li>
+        <li data-filter="Art">Art</li>
+        <li data-filter="News">News</li>
       </ul>
+    </div>
+
+    <!-- Detail for Post 1 -->
+    <div id="post1" class="post" style="display:none; margin-top: 40px;">
+      <h2>Post 1 Title</h2>
+      <p>This is the full content of post 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat eros at quam facilisis...</p>
+      <span class="post-category">Technology</span>
+      <p><a href="#" onclick="location.hash=''; return false;">&larr; Back to Blog</a></p>
     </div>
   </div>
 
-  <footer>
-    <p>&copy; 2025 Hans Tirta. All rights reserved.</p>
-  </footer>
+  <footer><p>&copy; 2025 My Simple Blog. All rights reserved.</p></footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', function () {
+      const posts = document.querySelectorAll('.posts .post');
+      const postList = document.getElementById('postList');
+      const post1Detail = document.getElementById('post1');
       const searchInput = document.getElementById('searchInput');
-      const posts = document.querySelectorAll('.post');
+      const categories = document.querySelectorAll('#categoryList li');
       const postsPerPage = 5;
       let currentPage = 1;
 
       function showPage(page) {
+        const visiblePosts = Array.from(posts).filter(p => p.style.display !== 'none');
         const start = (page - 1) * postsPerPage;
         const end = start + postsPerPage;
-        posts.forEach((post, index) => {
+        visiblePosts.forEach((post, index) => {
           post.style.display = index >= start && index < end ? 'block' : 'none';
         });
       }
@@ -177,9 +100,22 @@
         const keyword = searchInput.value.toLowerCase();
         posts.forEach(post => {
           const text = post.innerText.toLowerCase();
-          post.style.display = text.includes(keyword) ? 'block' : 'none';
+          post.style.display = text.includes(keyword) ? '' : 'none';
         });
+        currentPage = 1;
+        showPage(currentPage);
       }
+
+      categories.forEach(cat => {
+        cat.addEventListener('click', () => {
+          const filter = cat.dataset.filter;
+          posts.forEach(post => {
+            post.style.display = (filter === 'All' || post.dataset.category === filter) ? '' : 'none';
+          });
+          currentPage = 1;
+          showPage(currentPage);
+        });
+      });
 
       document.getElementById('prevBtn').addEventListener('click', () => {
         if (currentPage > 1) {
@@ -189,18 +125,23 @@
       });
 
       document.getElementById('nextBtn').addEventListener('click', () => {
-        if (currentPage < Math.ceil(posts.length / postsPerPage)) {
+        const visiblePosts = Array.from(posts).filter(p => p.style.display !== 'none');
+        if (currentPage < Math.ceil(visiblePosts.length / postsPerPage)) {
           currentPage++;
           showPage(currentPage);
         }
       });
 
-      searchInput.addEventListener('input', function () {
-        currentPage = 1;
-        filterPosts();
-      });
+      searchInput.addEventListener('input', filterPosts);
 
-      showPage(currentPage);
+      if (location.hash === '#post1') {
+        postList.style.display = 'none';
+        post1Detail.style.display = 'block';
+        document.querySelector('.pagination').style.display = 'none';
+        document.querySelector('.categories').style.display = 'none';
+      } else {
+        showPage(currentPage);
+      }
     });
   </script>
 </body>
