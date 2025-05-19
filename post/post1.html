@@ -29,7 +29,7 @@
       display: flex; 
       flex-direction: column; 
     }
-    .post { padding: 20px; }
+    .post { padding: 20px; flex-grow: 1; }
     .post-category { 
       background: #666; 
       color: white; 
@@ -39,11 +39,16 @@
       font-size: 0.9em; 
       margin-top: 5px; 
     }
+    .back-link-wrapper {
+      text-align: center;
+      padding: 15px;
+      background: #eee;
+    }
     a.back-link { 
       display: inline-block; 
-      margin-top: 20px; 
       color: #333; 
       text-decoration: none; 
+      font-weight: bold;
     }
   </style>
 </head>
@@ -52,10 +57,12 @@
 
   <div class="container">
     <div class="post">
-      <h2>DAFTAR PENJUALAN TOKO BANGUNAN BERKAH</h2>
+      <h2>Post 1 Title</h2>
       <span class="post-category">Technology</span>
       <p>This is the full content of post 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent feugiat eros at quam facilisis, sed gravida nisi tincidunt. Donec non velit non lorem congue convallis.</p>
-      <a href="../index.html" class="back-link">&larr; Back to Blog</a>
+    </div>
+    <div class="back-link-wrapper">
+      <a href="../index.html" class="back-link">&larr; Back to Home</a>
     </div>
   </div>
 
