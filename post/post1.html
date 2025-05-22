@@ -20,7 +20,7 @@
     }
     .container {
       flex: 1;
-      max-width: 800px;
+      width: 95%;
       margin: 20px auto;
       padding: 0 20px;
       background: white;
@@ -28,6 +28,14 @@
       box-shadow: 0 0 5px rgba(0,0,0,0.1);
       display: flex;
       flex-direction: column;
+    }
+    @media (max-width: 768px) {
+      .container {
+        width: 100%;
+        margin: 10px 0;
+        border-radius: 0;
+        padding: 0 10px;
+      }
     }
     .post { padding: 20px; flex-grow: 1; }
     .post-category {
@@ -51,6 +59,32 @@
       height: 500px;
       border: 1px solid #ccc;
       margin: 20px 0;
+      transform-origin: 0 0;
+    }
+    .iframe-controls {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .iframe-controls button, .iframe-controls a {
+      padding: 8px 12px;
+      font-size: 1em;
+      cursor: pointer;
+      background-color: #333;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+    .iframe-controls a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .iframe-controls button:hover, .iframe-controls a:hover {
+      background-color: #555;
     }
     .back-link-wrapper {
       text-align: center;
@@ -75,7 +109,14 @@
       <p>Berikut ini adalah data penjualan toko bangunan yang dilengkapi dengan gambar produk dan file laporan excel:</p>
 
       <h3>Laporan Penjualan (Excel)</h3>
-      <iframe src="https://docs.google.com/spreadsheets/d/1HJ-2N08fqoDAeYkNs_iNe9HjIF7-zBVE/edit?usp=sharing&ouid=101291743393953691020&rtpof=true&sd=true"></iframe>
+
+      <div class="iframe-controls">
+        <button onclick="zoomIframe(1.2)">Zoom In</button>
+        <button onclick="zoomIframe(0.8)">Zoom Out</button>
+        <a href="https://docs.google.com/spreadsheets/d/1HJ-2N08fqoDAeYkNs_iNe9HjIF7-zBVE/edit?usp=drive_link&ouid=101291743393953691020&rtpof=true&sd=true" target="_blank" download>Download Excel</a>
+      </div>
+
+      <iframe id="reportFrame" src="https://docs.google.com/spreadsheets/d/1HJ-2N08fqoDAeYkNs_iNe9HjIF7-zBVE/edit?usp=drive_link&ouid=101291743393953691020&rtpof=true&sd=true"></iframe>
 
       <p>File laporan Excel ditampilkan menggunakan Google Docs Viewer. Jika tidak tampil, pastikan file dibagikan secara publik di Google Drive dan gunakan URL dari menu "Bagikan".</p>
     </div>
@@ -86,5 +127,13 @@
   </div>
 
   <footer><p>&copy; 2025 My Simple Blog. All rights reserved.</p></footer>
+
+  <script>
+    let currentZoom = 1;
+    function zoomIframe(factor) {
+      currentZoom *= factor;
+      document.getElementById('reportFrame').style.transform = `scale(${currentZoom})`;
+    }
+  </script>
 </body>
 </html>
